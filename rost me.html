@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dark AI Life Destroyer Roast</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(to right, #111, #555);
+      color: #eee;
+      text-align: center;
+      padding: 20px;
+    }
+
+    header {
+      margin-bottom: 20px;
+      color: white;
+      text-shadow: 2px 2px #333;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    form {
+      margin: 10px 0;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      margin: 10px;
+      border: 1px solid #333;
+      border-radius: 5px;
+      width: 300px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+
+    #result {
+      margin: 20px 0;
+      padding: 20px;
+      border: 1px solid #555;
+      border-radius: 10px;
+      background-color: #222;
+      color: #ddd;
+      line-height: 1.8;
+      height: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Dark Roast Generator</h1>
+    <p>अपना नाम डालें और जानें, आपके जीवन में क्या 'रोस्ट' छिपा है...</p>
+  </header>
+
+  <main>
+    <form>
+      <input type="text" id="name" placeholder="अपना नाम डालें" required />
+      <br />
+      <button type="button" onclick="generateRoast()">Roast Me</button>
+    </form>
+    <div id="result">
+      <p id="roastText">रोस्ट यहाँ दिखेगा...</p>
+    </div>
+  </main>
+
+  <script>
+    const roasts = [
+      "तुम्हारी लाइफ में उम्मीदें भी तुम्हारी तरह ही गरीब हैं।",
+      "तुम्हारा भविष्य ऐसा है जैसे जला हुआ टोस्ट।",
+      "तुम्हारी वजह से दुनिया में अंधेरा ज्यादा है।",
+      "तुम्हारा सपना देखना ही तुम्हारी सबसे बड़ी गलती थी।",
+      "तुम्हारी हालत देखकर लगता है कि तुमने खुद से दुश्मनी की है।",
+      "तुम्हारी जिंदगी बिल्कुल वैसी ही है जैसी एक खतरनाक रोड पर खो जाना।",
+      "तुम्हारे लिए खुशियाँ हमेशा दूर की बात ही रही हैं।",
+      "तुम्हारे फैसले तुम्हारी सबसे बड़ी नाकामी हैं।",
+      "तुम्हारे सपनों में शायद ही किसी ने भरोसा किया होगा।",
+      "तुम्हारी वजह से जीवन में समस्या का मतलब समझ आया।",
+      "तुम्हारी आत्मा शायद किसी और समय में फंसी हुई है।",
+      "तुम्हारी मेहनत का परिणाम शायद भी कचरा ही रहेगा।",
+      "तुम्हारी हर उम्मीद, हर सपना सिर्फ एक झूठ ही निकला।",
+      "तुम्हारी लाइफ तो समस्याओं की ट्रेन की तरह है।",
+      "तुम्हारे लिए खुशियाँ दूसरी दुनिया का सपना हैं।",
+      "तुम्हारा भरोसा ही तुम्हारी सबसे बड़ी कमजोरी है।",
+      "तुम्हारी किस्मत तो केवल बुरी चीजों के लिए ही है।",
+      "तुम्हारा हर रास्ता तुम्हें बुरी बातों की ओर ही ले जाता है।",
+      "तुम्हारी कोशिशें भी उसी तरह फिजूल हैं जैसे बिना पतवार की नाव।",
+      "तुम्हारी मेहनत कभी किसी काम की नहीं आई।",
+      "तुम्हारे सपने और तुम एक-दूसरे के दुश्मन हो।",
+      "तुम्हारी समस्या का समाधान केवल समय के साथ गायब होना है।",
+      "तुम्हारी वजह से ही समस्या की शुरुआत होती है।",
+      "तुम्हारे लिए यह जीवन एक दर्द ही है।",
+      "तुम्हारी मुस्कान भी एक धोखा है।",
+      "तुम्हारा हर कदम एक और गलती है।"
+    ];
+
+    function generateRoast() {
+      const name = document.getElementById('name').value.trim();
+      const randomIndex = Math.floor(Math.random() * roasts.length);
+
+      if (name) {
+        const roastOutput = `${name}, तुम्हारी हालत के लिए यह बात सच है: ${roasts[randomIndex]}`;
+        document.getElementById('roastText').innerHTML = roastOutput;
+      } else {
+        alert("कृपया अपना नाम दर्ज करें।");
+      }
+    }
+  </script>
+</body>
+
+</html>
